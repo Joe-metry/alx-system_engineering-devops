@@ -1,0 +1,33 @@
+ 19 Include /etc/ssh/ssh_config.d/*.conf
+ 20 
+ 21 Host *
+ 22 #   ForwardAgent no
+ 23 #   ForwardX11 no
+ 24 #   ForwardX11Trusted yes
+ 25     PasswordAuthentication no
+ 26 #   HostbasedAuthentication no
+ 27 #   GSSAPIAuthentication no
+ 28 #   GSSAPIDelegateCredentials no
+ 29 #   GSSAPIKeyExchange no
+ 30 #   GSSAPITrustDNS no
+ 31 #   BatchMode no
+ 32 #   CheckHostIP yes
+ 33 #   AddressFamily any
+ 34 #   ConnectTimeout 0
+ 35 #   StrictHostKeyChecking ask
+ 36     IdentityFile ~/.ssh/school
+ 37 #   IdentityFile ~/.ssh/id_rsa
+ 38 #   IdentityFile ~/.ssh/id_dsa
+ 39 #   IdentityFile ~/.ssh/id_ecdsa
+ 40 #   IdentityFile ~/.ssh/id_ed25519
+ 41 #   Port 22
+ 42 #   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+ 43 #   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+ 44 #   EscapeChar ~
+ 45 #   Tunnel no
+ 46 #   TunnelDevice any:any
+ 47 #   PermitLocalCommand no
+ 48 #   VisualHostKey no
+ 49 #   ProxyCommand ssh -q -W %h:%p gateway.example.com
+ 50 #   RekeyLimit 1G 1h
+ 51     SendEnv LANG LC_*
