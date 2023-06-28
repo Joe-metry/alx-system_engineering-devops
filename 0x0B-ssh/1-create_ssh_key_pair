@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script that generates SSH key pairs saved in the ~/.ssh/school file
+
+ssh-keygen -t rsa -b 4096 -P betty -f school
