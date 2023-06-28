@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Automating file configuration process using Puppet
 
- file { 'etc/ssh/ssh_config':
+ file { 'etc/ssh/ssh_cofig':
 	ensure => present,
 
  content =>"
