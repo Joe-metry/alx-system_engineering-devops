@@ -14,7 +14,7 @@ path_to_ssh_key=$4
 
 # Disabling Srict host key
 
-scp -o "StrictHostKeyChecking=no" -i "path_to_ssh_key" "path_to_file" "username@$ip:~/"
+scp -o "StrictHostKeyChecking=no" -i "$path_to_ssh_key" "$path_to_file" "$username@$ip:~/"
 
 # Checking if file transfer was successfull
 
