@@ -9,7 +9,7 @@
 	#SSH client configuration
 	host*
 	IdentityFile ~/.ssh/school
-	PasswordAuthentification no
+	PasswordAuthentication no
 	",
 }
 	
