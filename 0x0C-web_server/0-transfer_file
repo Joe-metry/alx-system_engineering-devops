@@ -18,7 +18,7 @@ scp -o "StrictHostKeyChecking=no" -i "$path_to_ssh_key" "$path_to_file" "$userna
 
 # Checking if file transfer was successfull
 
-if [$? -eq 0]
+if [ $? -eq 0 ]
 then
 	echo "FILE TRANSFER WAS SUCCESSFULLY CARRIED OUT"
 else
