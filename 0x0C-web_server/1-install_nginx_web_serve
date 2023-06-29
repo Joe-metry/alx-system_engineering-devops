@@ -5,16 +5,16 @@
 sudo apt-get update
 
 # Installing the Web Server
-sudo apt-get install nginx
+sudo apt-get -y install nginx
 
 # Allowing port 80 the HTTP port to listen using the ufw firewall
-sudo ufw 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTP'
 
 # Writing a string into an HTML file to be displayed
-echo "Hello World!" | sudo tee /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 
 # Testing our Nginx server
 sudo nginx -t
 
 # Restarting our Nginx
-service nginx reload
+sudo service nginx start
