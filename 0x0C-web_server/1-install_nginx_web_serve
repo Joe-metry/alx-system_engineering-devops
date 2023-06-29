@@ -2,19 +2,19 @@
 # A script that installs Nginx Web server, create a new HTML file in the html directory
 
 # Updating our server
-sudo apt-get -y update
+sudo apt-get update
 
 # Installing the Web Server
-sudo apt-get -y install nginx
+sudo apt-get install nginx
 
 # Allowing port 80 the HTTP port to listen using the ufw firewall
 sudo ufw 'Nginx HTTP'
 
 # Writing a string into an HTML file to be displayed
-echo "Hello World!" | sudo tee  /var/www/html/index.html
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Testing our Nginx server
 sudo nginx -t
 
 # Restarting our Nginx
-service nginx restart
+service nginx reload
