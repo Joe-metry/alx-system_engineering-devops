@@ -1,3 +1,1 @@
-#!/usr/bin/env bash
-# A Script that turns on an Apache Server container
-service apache2 start
+A project on Web Stack debugging and more
