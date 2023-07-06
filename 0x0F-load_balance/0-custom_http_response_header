@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2154
-# this script configures a brand new Ubuntu machine.
+# this script configures a brand new Ubuntu machine
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
