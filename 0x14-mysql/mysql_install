@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Bash script ot install MySQL v5.7
+# Get MySQL Signature key from: https://dev.mysql.com/doc/refman/5.7/en/checking-gpg-signature.html
+#+Save it on a file into your machine as 'mysql_signature.key' and pass it as argument to this script.
+
+# Checkc if key file argument is passed.
+if [[ $# -ne 1 ]];then
+	echo "Usage: $0 <mysql_signature.key file>"
+	exit 1
+fi
+
+# Add MySQL v5.7 signnature key to apt keys.
+sudo apt-key add "$1"
+
+# Add the apt repository for MySQL 5.7x
+sudo sh -c 'echo "deb http://repo.mysql.com/apt/ubuntu bionic mysql-5.7" >> /etc/apt/sources.list.d/mysql.list'
+
+# Update apt repositories and packages
+sudo apt-get update
+
+# Check your available versions
+sudo apt-cache policy mysql-server
+
+# Install mysql 5.7
+sudo apt install -fy mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
